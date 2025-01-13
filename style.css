@@ -9,6 +9,7 @@ body{
     display: flex;
 }
 
+/* stylist for grid cobtainer consit of rows*/
 #container{
     background-color: white;
     width: 750px;
@@ -22,6 +23,7 @@ body{
     flex-direction: column;
 }
 
+/* stylist for rows consit of squares*/
 .rows{
     margin: 0.5px;
     display: flex;
@@ -29,10 +31,18 @@ body{
     flex: 1 1 auto;
 }
 
-.elements{
+/* stylist for squares*/
+.squares{
     border: solid, 0.1rem, black;
     margin: 0.5px;
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
 }
+
+/* hover effect method2: add ":hover" Pseudo-class */
+/*
+.squares:hover{
+    background-color: red;
+}
+*/
