@@ -1,0 +1,38 @@
+body{
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    min-height: 100vh;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    display: flex;
+}
+
+#container{
+    background-color: white;
+    width: 750px;
+    height: 750px;
+
+    margin: auto;
+    padding: 1rem;
+    border: solid, 1rem, black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.rows{
+    margin: 0.5px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.elements{
+    border: solid, 0.1rem, black;
+    margin: 0.5px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
