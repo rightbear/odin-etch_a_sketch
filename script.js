@@ -15,7 +15,8 @@ for (let i=1 ; i <= 16 ; i++){
     // add squares in rows
     for (let j=1 ; j <=16 ; j++){
         let gridSquare = document.createElement('div'); 
-        gridSquare.setAttribute("class", "squares");
+        gridSquare.classList.add("squares");
+        gridSquare.classList.add("withoutHover");
         gridRow.appendChild(gridSquare);
     }
 }
@@ -25,11 +26,12 @@ const gridSquare = document.querySelectorAll(".squares");
 
 gridSquare.forEach((square) => {
     square.addEventListener("mouseover", event => {
-        square.setAttribute("style", "background: red;");
+        square.classList.remove("withoutHover");
+        square.classList.add("withHover");
     });
 
     square.addEventListener("mouseout", event => {
-        square.setAttribute("style", "background: white;");
+        square.classList.remove("withHover");
+        square.classList.add("withoutHover");
     });
-});
-  
+})

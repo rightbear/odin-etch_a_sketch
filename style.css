@@ -40,6 +40,16 @@ body{
     flex: 1 1 auto;
 }
 
+/* hover effect method1: stylist for squares with hover*/
+.withHover{
+    background-color: red;
+}
+
+/* hover effect method1: stylist for squares without hover*/
+.withoutHover{
+    background-color: white;
+}
+
 /* hover effect method2: add ":hover" Pseudo-class */
 /*
 .squares:hover{
