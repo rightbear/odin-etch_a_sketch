@@ -1,10 +1,6 @@
 const body = document.querySelector('body');
 const headerButton = document.querySelector('#headerButton');
-
-// add grid cobtainer to include rows(consiisting of squares)
-const gridContainer = document.createElement('div');
-gridContainer.setAttribute("id", "container");
-body.appendChild(gridContainer);
+const gridContainer = document.querySelector('#container');
 
 // add EventListener for button to reate new grid
 headerButton.addEventListener('click', function setDimension(event){
