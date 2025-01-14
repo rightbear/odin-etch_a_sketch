@@ -7,13 +7,19 @@ body{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     display: flex;
+    flex-direction: column;
+}
+
+#queryButton{
+    flex: auto;
+    margin: 1em auto 1em auto;
 }
 
 /* stylist for grid cobtainer consit of rows*/
 #container{
     background-color: white;
-    width: 750px;
-    height: 750px;
+    width: 800px;
+    height: 800px;
 
     margin: auto;
     padding: 1rem;
