@@ -1,10 +1,5 @@
 const body = document.querySelector('body');
-
-// add button to set the dimension for new grid in container 
-const queryButton = document.createElement('button');
-queryButton.textContent = "Create Grid";
-queryButton.setAttribute("id", "queryButton")
-body.appendChild(queryButton);
+const headerButton = document.querySelector('#headerButton');
 
 // add grid cobtainer to include rows(consiisting of squares)
 const gridContainer = document.createElement('div');
@@ -12,7 +7,7 @@ gridContainer.setAttribute("id", "container");
 body.appendChild(gridContainer);
 
 // add EventListener for button to reate new grid
-queryButton.addEventListener('click', function setDimension(event){
+headerButton.addEventListener('click', function setDimension(event){
     const gridDimension = getDimension();
 
     // if there is old squares in container of grid, remove all squares.

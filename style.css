@@ -10,9 +10,33 @@ body{
     flex-direction: column;
 }
 
-#queryButton{
-    height: 3em;
-    margin: 1em auto 1em auto;
+.header{
+    width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#headerButton{
+    border: none;
+    background-color: #f44336;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px; 
+}
+
+#headerButton:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
 }
 
 /* stylist for grid cobtainer consit of rows*/
@@ -54,10 +78,3 @@ body{
 .withoutHover{
     background-color: white;
 }
-
-/* hover effect method2: add ":hover" Pseudo-class */
-/*
-.squares:hover{
-    background-color: red;
-}
-*/
