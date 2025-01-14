@@ -25,8 +25,9 @@ body{
 
 /*******************************/
 
-#headerButton, #footerBlack,
-#footerRandom, #footerDarken {
+#headerButton,
+#footerBlack,
+#footerRandom {
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -72,18 +73,6 @@ body{
     border: 2px solid #008CBA;
 }
 
-#footerDarken{
-    background-color: #e7e7e7;
-    color: black;
-    border: none;
-}
-
-#footerDarken:hover {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #e7e7e7;
-}
-
 /*******************************/
 
 /* stylist for grid cobtainer consit of rows*/
@@ -114,14 +103,5 @@ body{
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
-}
-
-/* hover effect method1: stylist for squares with hover*/
-.withHover{
-    background-color: black;
-}
-
-/* hover effect method1: stylist for squares without hover*/
-.withoutHover{
     background-color: white;
 }

@@ -64,7 +64,6 @@ function addNewSquares(gridDimension){
         for (let j=1 ; j <=gridDimension ; j++){
             let gridSquare = document.createElement('div'); 
             gridSquare.classList.add("squares");
-            gridSquare.classList.add("withoutHover");
             gridRow.appendChild(gridSquare);
         }
     }
@@ -72,23 +71,60 @@ function addNewSquares(gridDimension){
 
 // add EventListner for each square in container of new grid
 function addHoverfunction(){
-    // hover effect method1: add EventListner on element in class "squares"
+
+    // add EventListner on element in class "squares" to make hover effect
     const gridSquare = document.querySelectorAll(".squares");
 
-    // change the class type of squares in grid based on the position if mouse.
+    // change the class type of squares in grid based on the position of mouse.
     gridSquare.forEach((square) => {
-        // if mouse hover on square, it will change color to red
-        square.addEventListener("mouseover", event => {
-            square.classList.remove("withoutHover");
-            square.classList.add("withHover");
-        });
 
-        // if mouse leave the square, it will will back to white
-        /*
-        square.addEventListener("mouseout", event => {
-            square.classList.remove("withHover");
-            square.classList.add("withoutHover");
-        });
-        */
+        const footerBlack = document.querySelector("#footerBlack");
+        const footerRandom = document.querySelector("#footerRandom");
+
+        // the default color for hover effect is black
+        let squareColor = "black";
+        // the default transparency for hover effect is 0
+        let squareOpacity = 0;
+
+        // choose color effect when hovering
+        chooseColor(square, footerBlack, footerRandom, squareColor, squareOpacity);
     })
+}
+
+function chooseColor(square, footerBlack, footerRandom, squareColor, squareOpacity){
+    let colorChoice = "black";
+
+    // if you click "Black", squares will gradually be colored black
+    footerBlack.addEventListener("click", event => {
+        colorChoice = "black";
+    });
+
+    // if you click "Random", squares will gradually be colored random color
+    footerRandom.addEventListener("click", event => {
+        colorChoice = "random";
+    });
+
+    // if mouse hover on square, it will change color based on the button you clicked in footer
+    square.addEventListener("mouseover", event => {
+        // impelemnt a progressive darkening effect where each hover interaction will darken the square by 10% with "opacity" value
+        // stop increasing opacity value when it arrives 1
+        if(squareOpacity < 1)  {
+            squareOpacity += 0.1;
+        }
+
+        // square will be colored black 
+        if (colorChoice == "black"){
+            squareColor = "black";
+        }
+        // square will be colored random color
+        else if(colorChoice == "random"){
+            squareColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
+        }
+        square.setAttribute("style", `background: ${squareColor}; opacity: ${squareOpacity};`);
+    });
+}
+
+// randomize 3 different values in rgb with this function
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }
