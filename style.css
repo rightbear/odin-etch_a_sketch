@@ -11,15 +11,15 @@ body{
 }
 
 #queryButton{
-    flex: auto;
+    height: 3em;
     margin: 1em auto 1em auto;
 }
 
 /* stylist for grid cobtainer consit of rows*/
 #container{
     background-color: white;
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
 
     margin: auto;
     padding: 1rem;
@@ -31,7 +31,7 @@ body{
 
 /* stylist for rows consit of squares*/
 .rows{
-    margin: 0.5px;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
@@ -39,8 +39,7 @@ body{
 
 /* stylist for squares*/
 .squares{
-    border: solid, 0.1rem, black;
-    margin: 0.5px;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
@@ -48,7 +47,7 @@ body{
 
 /* hover effect method1: stylist for squares with hover*/
 .withHover{
-    background-color: red;
+    background-color: black;
 }
 
 /* hover effect method1: stylist for squares without hover*/

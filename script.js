@@ -93,9 +93,11 @@ function addHoverfunction(){
         });
 
         // if mouse leave the square, it will will back to white
+        /*
         square.addEventListener("mouseout", event => {
             square.classList.remove("withHover");
             square.classList.add("withoutHover");
         });
+        */
     })
 }
